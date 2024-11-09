@@ -1,0 +1,9 @@
+# Configuración de LcBattle
+
+general:
+  world_save_path: "mundos/"   # Carpeta donde se guardan los mapas
+  teleport_on_create: true     # Activar o desactivar teletransportación automática al crear un mapa
+
+messages:
+  teleport_to_map: "¡Te has teletransportado al mapa %mapa%!"  # Mensaje cuando el jugador se teletransporta
+  map_created: "Mapa %mapa% creado exitosamente."  # Mensaje cuando un mapa es creado

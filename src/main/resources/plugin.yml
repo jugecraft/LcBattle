@@ -1,7 +1,13 @@
-name: MainPlugin
+name: LcBattle
 version: 1.0
-main: MainPlugin
+main: com.lcbattle.LcBattlePlugin
+api-version: 1.16
 commands:
-  lcbt:
-    description: Comando principal para gestionar funciones del plugin.
-    usage: /lcbt <subcomando>
+  teleportmap:
+    description: Teletransportarse a un mapa.
+    usage: /teleportmap <mapa>
+    permission: lcbattle.teleport
+  importworld:
+    description: Importar un mundo al plugin como mapa.
+    usage: /importworld <mundo>
+    permission: lcbattle.import

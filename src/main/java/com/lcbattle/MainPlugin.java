@@ -1,27 +1,22 @@
 package com.lcbattle;
 
+import org.bukkit.Bukkit;
+import org.bukkit.World;
+import org.bukkit.WorldCreator;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class MainPlugin extends JavaPlugin {
 
-    private CommandManager commandManager;
-
     @Override
     public void onEnable() {
-        // Configuración del plugin
-        saveDefaultConfig();
+        // Registrar el generador de chunks personalizado
+        // En este caso, creamos un mundo con el generador personalizado
 
-        // Inicializar el manejador de comandos
-        commandManager = new CommandManager(this);
+        WorldCreator worldCreator = new WorldCreator("myCustomWorld");
+        worldCreator.generator(new com.lcbattle.ChunkProviderGenerate());  // Usamos nuestro generador personalizado
 
-        // Registrar comandos
-        getCommand("lcbt").setExecutor(commandManager);
-
-        getLogger().info("Plugin habilitado.");
-    }
-
-    @Override
-    public void onDisable() {
-        getLogger().info("Plugin deshabilitado.");
+        World world = Bukkit.createWorld(worldCreator);
+        // Ahora 'world' tiene el generador que has creado
+        getLogger().info("Mundo personalizado creado con el generador CustomChunkGenerator");
     }
 }

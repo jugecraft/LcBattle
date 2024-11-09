@@ -1,0 +1,80 @@
+arenas:
+  # Arena 1
+  arena1:
+    name: "arena1"
+    display_name: "Arena 1"
+    max_players: 10  # Número máximo de jugadores
+    min_players: 2   # Número mínimo de jugadores para comenzar la partida
+    active: true      # Estado de la arena (si está activa o no)
+    spawn:
+      # Puntos de aparición para los jugadores
+      team1:
+        x: 100
+        y: 64
+        z: 100
+        world: world
+      team2:
+        x: 110
+        y: 64
+        z: 110
+        world: world
+    settings:
+      # Otros ajustes específicos para la arena
+      time_limit: 15  # Tiempo límite de la partida en minutos
+      respawn: true   # Si los jugadores deben reaparecer tras morir
+      loot_chests: true  # Si la arena tiene cofres con loot
+    description: "Una arena épica con vistas al océano." # Descripción de la arena
+
+  # Arena 2
+  arena2:
+    name: "arena2"
+    display_name: "Arena 2"
+    max_players: 12
+    min_players: 3
+    active: true
+    spawn:
+      team1:
+        x: 200
+        y: 64
+        z: 200
+        world: world
+      team2:
+        x: 210
+        y: 64
+        z: 210
+        world: world
+    settings:
+      time_limit: 20
+      respawn: false
+      loot_chests: false
+    description: "Una arena futurista en una ciudad flotante."
+
+  # Arena 3
+  arena3:
+    name: "arena3"
+    display_name: "Arena 3"
+    max_players: 8
+    min_players: 2
+    active: false  # Arena no activa actualmente
+    spawn:
+      team1:
+        x: 300
+        y: 64
+        z: 300
+        world: world
+      team2:
+        x: 310
+        y: 64
+        z: 310
+        world: world
+    settings:
+      time_limit: 10
+      respawn: true
+      loot_chests: true
+    description: "Una arena medieval en un castillo en ruinas."
+
+# Configuración global
+general_settings:
+  default_time_limit: 15  # Tiempo límite por defecto para las arenas si no se especifica
+  default_respawn: true   # Reaparecer por defecto tras morir
+  default_loot_chests: true # Cofres con loot por defecto

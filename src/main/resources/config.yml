@@ -1,9 +1,63 @@
-# Configuración de LcBattle
+# Configuración General del Plugin LC-Battle
 
-general:
-  world_save_path: "mundos/"   # Carpeta donde se guardan los mapas
-  teleport_on_create: true     # Activar o desactivar teletransportación automática al crear un mapa
-
+# Mensajes Predeterminados
 messages:
-  teleport_to_map: "¡Te has teletransportado al mapa %mapa%!"  # Mensaje cuando el jugador se teletransporta
-  map_created: "Mapa %mapa% creado exitosamente."  # Mensaje cuando un mapa es creado
+  player-join-message: "🌟 ¡Bienvenido al LcBattle, {jugador}! Prepárate para luchar y ganar. ¡Suerte! 🍀"
+  arena_not_found: "¡La arena {arena} no fue encontrada!"
+  arena_full: "La arena {arena} está llena, por favor elige otra."
+  arena_joined: "¡Te has unido a la arena {arena}!"
+  arena_left: "¡Has dejado la arena {arena}!"
+  arena_started: "¡La batalla ha comenzado en {arena}!"
+  arena_stopped: "¡La batalla en {arena} ha sido detenida!"
+  spawn_set: "¡El punto de aparición para el jugador {jugador} ha sido establecido!"
+  not_enough_players: "No hay suficientes jugadores para comenzar la partida en {arena}."
+  stats_display: "Estadísticas de {jugador}: Victorias: {wins}, Muertes: {kills}, Tiempo Jugado: {time} minutos."
+  leaderboard: "Ranking de jugadores: {top_players}"
+  invalid_command: "Comando inválido. Usa '/lcbattle help' para obtener una lista de comandos."
+
+# Configuración de LCoins
+lcoins:
+  enabled: true
+  start_balance: 100  # Balance inicial de LCoins para nuevos jugadores
+  max_balance: 1000  # Balance máximo de LCoins que un jugador puede tener
+  min_balance: 0     # Balance mínimo de LCoins para un jugador
+
+# Configuración del Sistema de Top (ranking)
+ranking:
+  show_top_on_join: true  # Si se muestra el ranking de jugadores al unirse al servidor
+  top_display_limit: 10   # Número de jugadores a mostrar en el ranking
+
+# Configuración de Arena
+arena:
+  # Ajustes predeterminados para las arenas si no se especifican individualmente
+  default_max_players: 12   # Número máximo de jugadores por defecto para las arenas
+  default_min_players: 2    # Número mínimo de jugadores por defecto para las arenas
+  default_time_limit: 15    # Tiempo límite por defecto para las partidas (en minutos)
+  default_respawn: true     # Reaparecer por defecto después de morir
+  default_loot_chests: true # Si las arenas tendrán cofres de loot por defecto
+
+# Configuración del Lobby
+lobby:
+  # Punto de aparición del lobby cuando los jugadores entran
+  spawn:
+    x: 0
+    y: 64
+    z: 0
+    world: world
+
+# Configuración de Partidas
+match:
+  # Configuración de tiempo para partidas en arenas
+  default_match_time: 15  # Duración predeterminada de la partida (en minutos)
+  join_time_limit: 30     # Tiempo límite para que los jugadores se unan a una arena antes de que comience la partida
+
+# Configuración de Importación de Mapas
+import:
+  # Si se permite la importación de mapas
+  enabled: true
+  default_world: "world"  # El mundo predeterminado donde se importarán los mapas
+
+# Otras configuraciones
+general:
+  plugin_version: "1.0.0"
+  enable_debug_mode: false  # Si se habilita el modo de depuración para ver logs detallados

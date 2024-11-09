@@ -1,0 +1,40 @@
+# Mensajes de bienvenida y eventos para LcBattle
+
+# Mensaje que se muestra cuando un jugador se une al servidor.
+player-join-message: "🌟 ¡Bienvenido al mundo de LcBattle, {{player}}! Prepara tus armas y empieza la batalla. ¡Buena suerte! 🍀"
+
+# Mensaje que se muestra cuando un jugador abandona el servidor.
+player-leave-message: "👋 ¡Hasta pronto, {{player}}! Nos vemos en la próxima batalla. 💥"
+
+# Mensaje que se muestra cuando un jugador gana una partida.
+battle-win-message: "🏆 ¡Felicidades, {{player}}! ¡Has ganado la batalla! 🎉 ¿Estás listo para la próxima?"
+
+# Mensaje de derrota cuando un jugador pierde una batalla.
+battle-lose-message: "💔 ¡Oh no, {{player}}! Has sido derrotado... Pero no te preocupes, ¡la próxima vez serás el vencedor! 💪"
+
+# Mensaje para cuando un jugador es teletransportado al lobby.
+teleport-lobby-message: "🔮 ¡Te has teletransportado al lobby, {{player}}! Descansa y prepárate para la siguiente ronda."
+
+# Mensaje cuando se configura un spawn.
+spawn-set-message: "🚀 ¡El spawn ha sido configurado con éxito, {{player}}! ¡Estás listo para empezar la batalla!"
+
+# Mensaje cuando el mundo se importa correctamente.
+world-imported-message: "🌍 El mundo {{world}} ha sido importado con éxito. ¡Es hora de explorar nuevos desafíos!"
+
+# Mensaje para mostrar cuando se realiza un comando incorrecto o se proporciona un mal argumento.
+invalid-command-message: "⚠️ ¡Comando desconocido! Usa /lcbt help para ver los comandos disponibles."
+
+# Mensaje de error cuando el jugador no tiene permisos.
+no-permission-message: "🚫 ¡No tienes permiso para ejecutar este comando, {{player}}! 😞"
+
+# Mensaje para indicar que la partida ha comenzado.
+battle-start-message: "⚔️ ¡La batalla ha comenzado! Todos los jugadores deben prepararse para el combate. 🏃💨"
+
+# Mensaje cuando un jugador entra en la arena de batalla.
+battle-enter-message: "🏟️ {{player}} entra en la arena. ¡A luchar hasta el final! 🔥"
+
+# Mensaje cuando un jugador sale de la arena.
+battle-exit-message: "🚶‍♂️ {{player}} ha salido de la arena. ¡Gracias por participar!"
+
+# Mensaje que se muestra cuando el jugador usa un comando de ayuda.
+help-message: "❓ ¡Aquí están los comandos disponibles! Usa /lcbt <comando> para obtener más información."

@@ -1,2 +1,45 @@
-teleport_to_map: "¡Te has teletransportado al mapa %mapa%!"
-map_created: "Mapa %mapa% creado exitosamente."
+# Mensajes en Español para el Plugin LC-Battle
+
+# Mensajes predeterminados
+messages:
+  arena_not_found: "¡La arena no fue encontrada!"
+  arena_full: "La arena está llena, por favor elige otra."
+  arena_joined: "¡Te has unido a la arena {arena}!"
+  arena_left: "¡Has dejado la arena {arena}!"
+  arena_started: "¡La batalla ha comenzado en {arena}!"
+  arena_stopped: "¡La batalla en {arena} ha sido detenida!"
+  spawn_set: "¡El punto de aparición para el jugador {jugador} ha sido establecido!"
+  not_enough_players: "No hay suficientes jugadores para comenzar la partida en {arena}."
+  stats_display: "Estadísticas de {jugador}: Victorias: {wins}, Muertes: {kills}, Tiempo Jugado: {time} minutos."
+  leaderboard: "Ranking de jugadores: {top_players}"
+  invalid_command: "Comando inválido. Usa '/lcbattle help' para obtener una lista de comandos."
+
+# Mensajes para el sistema de LCoins
+lcoins:
+  earned: "¡Has ganado {amount} LCoins!"
+  spent: "¡Has gastado {amount} LCoins!"
+  not_enough: "¡No tienes suficientes LCoins para realizar esta acción!"
+
+# Mensajes para el ranking
+ranking:
+  show_top: "Los jugadores con el mejor rendimiento son: {top_players}"
+  no_top_found: "No hay jugadores en el ranking aún."
+
+# Mensajes del sistema de partida
+match:
+  started: "¡La partida en {arena} ha comenzado!"
+  stopped: "¡La partida en {arena} ha sido detenida!"
+  not_enough_players: "No hay suficientes jugadores para comenzar en {arena}."
+  match_ended: "¡La partida en {arena} ha terminado!"
+
+# Mensajes de ayuda
+help:
+  general: "Comandos disponibles: /lcbattle create, /lcbattle start, /lcbattle stop, /lcbattle join, /lcbattle leave, /lcbattle stats, /lcbattle leaderboard"
+  lcoins: "Comandos de LCoins: /lcbt lcoins set, /lcbt lcoins edit, /lcbt lcoins remove"
+  top: "Comandos de Top: /lcbt top {wins, kill, time} {edit, create, remove, reset}"
+  import: "Comando para importar un mapa: /lcbt import {mundo}"
+
+# Mensajes para el lobby
+lobby:
+  welcome: "¡Bienvenido al lobby de LC-Battle! Elige una arena para comenzar."
+  spawn: "Te has teletransportado al spawn."

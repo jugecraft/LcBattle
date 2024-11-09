@@ -1,2 +1,45 @@
-teleport_to_map: "You have been teleported to the map %mapa%!"
-map_created: "Map %mapa% created successfully."
+# English Messages for LC-Battle Plugin
+
+# Default messages
+messages:
+  arena_not_found: "The arena was not found!"
+  arena_full: "The arena is full, please choose another."
+  arena_joined: "You have joined the arena {arena}!"
+  arena_left: "You have left the arena {arena}!"
+  arena_started: "The battle has started in {arena}!"
+  arena_stopped: "The battle in {arena} has been stopped!"
+  spawn_set: "The spawn point for player {player} has been set!"
+  not_enough_players: "Not enough players to start the match in {arena}."
+  stats_display: "Stats for {player}: Wins: {wins}, Kills: {kills}, Time Played: {time} minutes."
+  leaderboard: "Leaderboard: {top_players}"
+  invalid_command: "Invalid command. Use '/lcbattle help' to see the available commands."
+
+# LCoins system messages
+lcoins:
+  earned: "You have earned {amount} LCoins!"
+  spent: "You have spent {amount} LCoins!"
+  not_enough: "You don't have enough LCoins to perform this action!"
+
+# Ranking system messages
+ranking:
+  show_top: "Top players: {top_players}"
+  no_top_found: "No players in the ranking yet."
+
+# Match system messages
+match:
+  started: "The match in {arena} has started!"
+  stopped: "The match in {arena} has been stopped!"
+  not_enough_players: "Not enough players to start in {arena}."
+  match_ended: "The match in {arena} has ended!"
+
+# Help messages
+help:
+  general: "Available commands: /lcbattle create, /lcbattle start, /lcbattle stop, /lcbattle join, /lcbattle leave, /lcbattle stats, /lcbattle leaderboard"
+  lcoins: "LCoins commands: /lcbt lcoins set, /lcbt lcoins edit, /lcbt lcoins remove"
+  top: "Top commands: /lcbt top {wins, kill, time} {edit, create, remove, reset}"
+  import: "Import a map with command: /lcbt import {world}"
+
+# Lobby system messages
+lobby:
+  welcome: "Welcome to the LC-Battle lobby! Choose an arena to start."
+  spawn: "You have been teleported to the spawn."

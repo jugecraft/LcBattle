@@ -42,5 +42,6 @@
                 </configuration>
             </plugin>
         </plugins>
+        <finalName>lc-battle-1.0.0</finalName> <!-- Agregado el nombre final del archivo JAR -->
     </build>
 </project>

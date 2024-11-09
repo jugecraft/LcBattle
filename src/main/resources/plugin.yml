@@ -1,60 +1,106 @@
-name: LcBattle
+name: LC-Battle
 version: 1.0
 main: com.lcbattle.LcBattlePlugin
+api-version: 1.13
 commands:
-  lcbt:
-    description: Comandos de administración de LcBattle.
-    usage: /lcbt <comando>
+  lcbattle:
+    description: Comandos para gestionar las batallas y arenas.
+    usage: /<command> <create|start|stop|join|leave|setspawn|stats|leaderboard>
     aliases:
-      - lcbt
-    permission: lcbattle.admin
+      - battle
+    subcommands:
+      create:
+        description: Crea una nueva arena de batalla.
+        usage: /lcbattle create <arena>
+      start:
+        description: Inicia una batalla en la arena especificada.
+        usage: /lcbattle start <arena>
+      stop:
+        description: Detiene una batalla y reinicia los jugadores.
+        usage: /lcbattle stop <arena>
+      join:
+        description: Permite a los jugadores unirse a una arena de batalla.
+        usage: /lcbattle join <arena>
+      leave:
+        description: Permite a los jugadores salir de una arena de batalla.
+        usage: /lcbattle leave <arena>
+      setspawn:
+        description: Establece el punto de aparición de un jugador dentro de una arena.
+        usage: /lcbattle setspawn <arena> <jugador>
+      stats:
+        description: Muestra las estadísticas de combate de un jugador.
+        usage: /lcbattle stats <jugador>
+      leaderboard:
+        description: Muestra el ranking de los jugadores con mejores puntuaciones.
+        usage: /lcbattle leaderboard
 
-  lcbt top:
-    description: Ver y gestionar los tops de jugadores.
-    usage: /lcbt top <wins|kills|time> [edit|create|remove|reset] [numero]
-    permission: lcbattle.admin
+  lcbt:
+    description: Comandos para la administración de arenas y configuraciones del plugin.
+    usage: /<command> <top|setlobby|setspawn|lcoins|rango|import|save|edit|reset|help>
+    aliases:
+      - adminbattle
+    subcommands:
+      top:
+        description: Gestiona los tops de victorias, asesinatos, o tiempo de juego.
+        usage: /lcbt top {wins|kill|time} <edit|create|remove|reset> [numero]
+        subcommands:
+          edit:
+            description: Edita un top existente.
+            usage: /lcbt top {wins|kill|time} edit <numero>
+          create:
+            description: Crea un nuevo top en el lugar donde esté el administrador.
+            usage: /lcbt top {wins|kill|time} create
+          remove:
+            description: Elimina un top específico.
+            usage: /lcbt top {wins|kill|time} remove <numero>
+          reset:
+            description: Reinicia todos los tops.
+            usage: /lcbt top {wins|kill|time} reset
 
-  lcbt setlobby:
-    description: Establecer el spawn de los jugadores en el lobby.
-    usage: /lcbt setlobby
-    permission: lcbattle.admin
+      setlobby:
+        description: Establece el punto de aparición de todos los jugadores en el lobby.
+        usage: /lcbt setlobby
 
-  lcbt setspawn:
-    description: Establecer el spawn para los jugadores en espera.
-    usage: /lcbt setspawn
-    permission: lcbattle.admin
+      setspawn:
+        description: Establece el punto de aparición de los jugadores mientras esperan la partida.
+        usage: /lcbt setspawn
 
-  lcbt lcoins:
-    description: Gestionar los Lcoins de los jugadores.
-    usage: /lcbt lcoins <edit|set|remove> <jugador> [monto]
-    permission: lcbattle.admin
+      lcoins:
+        description: Modifica los LCoins de un jugador.
+        usage: /lcbt lcoins <edit|set|remove> <jugador> <monto>
+        subcommands:
+          edit:
+            description: Edita la cantidad de LCoins de un jugador.
+            usage: /lcbt lcoins edit <jugador> <monto>
+          set:
+            description: Establece una cantidad de LCoins a un jugador.
+            usage: /lcbt lcoins set <jugador> <monto>
+          remove:
+            description: Elimina una cantidad de LCoins a un jugador.
+            usage: /lcbt lcoins remove <jugador> <monto>
 
-  lcbt rango:
-    description: Gestionar el rango de los jugadores (próximamente).
-    usage: /lcbt rango
-    permission: lcbattle.admin
+      rango:
+        description: Asigna un rango a un jugador (proximamente).
+        usage: /lcbt rango
+        permission: lcbattle.admin
+        permission-message: "Este comando está disponible próximamente."
 
-  lcbt import:
-    description: Importar un mundo externo como un mapa.
-    usage: /lcbt import <mundo>
-    permission: lcbattle.admin
+      import:
+        description: Importa un mundo externo y lo convierte en un mapa jugable.
+        usage: /lcbt import <mundo>
 
-  lcbt save:
-    description: Guardar un mapa modificado.
-    usage: /lcbt save <mapa>
-    permission: lcbattle.admin
+      save:
+        description: Guarda las modificaciones realizadas en un mapa.
+        usage: /lcbt save <mapa>
 
-  lcbt edit:
-    description: Editar mapas, kits, y configuraciones.
-    usage: /lcbt edit <mapa> <tp|save|max_player|min_player|time> [numero]
-    permission: lcbattle.admin
+      edit:
+        description: Edita la configuración de un mapa.
+        usage: /lcbt edit <mapa> <tp|save|max_player|min_player|time> [valor]
 
-  lcbt reset:
-    description: Reiniciar el plugin para guardar cambios o corregir errores.
-    usage: /lcbt reset
-    permission: lcbattle.admin
+      reset:
+        description: Reinicia el plugin para guardar cambios internos.
+        usage: /lcbt reset
 
-  lcbt help:
-    description: Mostrar la lista de comandos disponibles y su uso.
-    usage: /lcbt help
-    permission: lcbattle.admin
+      help:
+        description: Muestra la lista de todos los comandos disponibles.
+        usage: /lcbt help

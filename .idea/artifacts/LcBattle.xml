@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="LcBattle">
+    <output-path>$PROJECT_DIR$/../../LcBattle</output-path>
+    <root id="archive" name="LcBattle.jar" />
+  </artifact>
+</component>

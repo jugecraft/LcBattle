@@ -1,0 +1,7 @@
+name: MainPlugin
+version: 1.0
+main: MainPlugin
+commands:
+  lcbt:
+    description: Comando principal para gestionar funciones del plugin.
+    usage: /lcbt <subcomando>
